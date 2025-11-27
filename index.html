@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Chiva: Patrimonio Rodante de Colombia</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="main-navbar">
+        <a href="#hero" class="navbar-logo">LA CHIVA</a>
+        <div class="navbar-links">
+            <a href="#galeria">Galería</a>
+            <a href="#mapasonoro">Mapa Sonoro</a>
+            <a href="#historia">Historia</a>
+            <a href="#podcast">Podcast</a>
+            <a href="#animacion">Animación</a> 
+            <a href="#juego">Juego</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <header class="hero-section" id="hero"> 
+        <div class="hero-content">
+    <h1>LA CHIVA</h1>
+    <h2 class="hero-subtitle">
+        <span class="highlight-yellow">patrimonio rodante <br> de colombia</span>
+    </h2>
+    <a href="#podcast" class="hero-button">COMPARTE TU EXPERIENCIA</a>
+</div>
+    </header>
+
+    <section class="gallery-section" id="galeria"> 
+    <h2>GALERÍA</h2>
+    <div class="gallery-grid">
+        
+        <div class="gallery-item-info">
+            <img src="imagenes/chiva campesina galeria.jpg" alt="Chiva Campesina"> 
+            <h3>Chiva Campesina</h3>
+            <p>El modelo clásico y original, diseñado para transportar productos agrícolas y personas por las trochas más difíciles de los Andes.</p>
+        </div>
+
+        <div class="gallery-item-info">
+            <img src="imagenes/Chiva rumbera galeria.jpg" alt="Chiva Rumbera"> 
+            <h3>Chiva Rumbera</h3>
+            <p>Una adaptación moderna, convertida en atracción turística para fiestas, música y diversión, manteniendo la pintura vibrante.</p>
+        </div>
+        
+        <div class="gallery-item-info">
+            <img src="imagenes/chiva turistica galeria.jpg" alt="Chiva Turística"> 
+            <h3>Chiva Turística</h3>
+            <p>Utilizada en rutas definidas para mostrar paisajes, esta chiva está optimizada para la comodidad del viajero sin perder su espíritu tradicional.</p>
+        </div>
+
+    </div>
+</section>
+
+    <section class="sound-map-section" id="mapasonoro"> 
+    <h2>MAPA SONORO</h2>
+
+    <audio id="audioMotor" src="sonidos/motor.mp3" loop></audio>
+    <audio id="audioMusica" src="sonidos/musica.mp3" loop></audio>
+    <audio id="audioAmbiente" src="sonidos/ambiente.mp3" loop></audio>
+
+    <div class="sound-buttons">
+        <button id="btnMotor" onclick="playStop('audioMotor')"><i class="fas fa-play"></i> MOTOR</button>
+        <button id="btnMusica" onclick="playStop('audioMusica')"><i class="fas fa-play"></i> MÚSICA</button>
+        <button id="btnAmbiente" onclick="playStop('audioAmbiente')"><i class="fas fa-play"></i> AMBIENTE</button>
+        
+        <button><i class="fas fa-headphones"></i> PRÓX.</button>
+    </div>
+</section>
+
+    <section class="history-section" id="historia"> 
+    <h2>HISTORIA</h2>
+    <div class="history-container">
+        
+        <div class="history-item year-1900">
+            <div class="history-image">
+                <img src="imagenes/chiva 1900.png" alt="Chiva 1900">
+            </div>
+            <div class="history-text">
+                <h3>1900: Los Pioneros</h3>
+                <p>La chiva, conocida originalmente como "bus escalera", nace de la necesidad de conectar las zonas rurales montañosas con los centros urbanos de Colombia. Se construye adaptando carrocerías de madera sobre chasis de camiones, creando un vehículo robusto y versátil capaz de sortear caminos difíciles.</p>
+            </div>
+        </div>
+
+        <div class="history-item year-1950 reverse-order">
+            <div class="history-image">
+                <img src="imagenes/chiva 1950.png" alt="Chiva 1950">
+            </div>
+            <div class="history-text">
+                <h3>1950: La Edad de Oro</h3>
+                <p>Durante la mitad del siglo XX, la chiva se convierte en el principal medio de transporte de productos agrícolas y personas. Los artesanos empiezan a decorar las carrocerías con colores vivos, figuras geométricas y frases, transformando el vehículo en una pieza de arte rodante que refleja la cultura regional.</p>
+            </div>
+        </div>
+
+        <div class="history-item year-1980">
+            <div class="history-image">
+                <img src="imagenes/chiva 1980.jpeg" alt="Chiva 1980">
+            </div>
+            <div class="history-text">
+                <h3>1980: Patrimonio y Turismo</h3>
+                <p>Con la mejora de la infraestructura vial y la llegada de autobuses modernos, la función de transporte público de la chiva disminuye. Sin embargo, encuentra una nueva vida como atracción turística y vehículo de fiestas populares, especialmente en regiones como el Eje Cafetero, preservando su legado cultural.</p>
+            </div>
+        </div>
+        
+        <div class="history-item year-2020 reverse-order">
+            <div class="history-image">
+                <img src="imagenes/Chiva actual.png" alt="Chiva 2020">
+            </div>
+            <div class="history-text">
+                <h3>Hoy: Símbolo Cultural</h3>
+                <p>Actualmente, la chiva es un emblema de la identidad colombiana, celebrada en festivales y exposiciones. Aunque menos usadas para rutas rurales diarias, siguen siendo un testimonio vivo del ingenio popular y la alegría colombiana, siendo un referente de color y tradición.</p>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<section class="podcast-share-section" id="podcast"> 
+    
+    <div class="podcast-left">
+        <h2>VOCES EN LA CHIVA</h2>
+        <div class="video-responsive">
+    <iframe 
+        src="https://www.youtube.com/embed/sphlmDFPDRk?si=1TGHg_umR1ZW54Sw" 
+        title="Video Podcast de la Chiva" 
+        frameborder="0" 
+        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+</div>
+        <p class="video-caption">Escucha y mira las fascinantes historias de pasajeros que no olvidaran sus trayectos en la chiva.</p>
+    </div>
+    
+    <div class="share-right">
+    <h2>COMPARTIR TU EXPERIENCIA</h2>
+    
+    <form action="https://formspree.io/f/xdkrgyqb" method="POST">
+        <input type="text" name="Nombre" placeholder="Nombre" required>
+        <input type="text" name="Titulo" placeholder="Título" required>
+        <textarea name="Experiencia" placeholder="Tu experiencia..." required></textarea>
+        
+        <button type="submit">Enviar <i class="fas fa-camera"></i></button>
+    </form>
+</div>
+
+</section>
+
+<section class="animation-section" id="animacion">
+    <h2>ANIMACIÓN</h2>
+    
+    <div class="animation-grid">
+        <div class="animation-item">
+            <h3>Animación 1: La Chiva lleva mas que pasajeros</h3>
+            <div class="video-responsive">
+    <iframe 
+        src="https://www.youtube.com/embed/QHroON08WHE?si=qZm-_5PuiJPbysKN" 
+        title="La Chiva lleva mas que pasajeros" 
+        frameborder="0" 
+        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+</div>
+            <p>Un corto animado que explica como la chiva lleva caminos llenos de vida y tradicion.</p>
+        </div>
+        
+        <div class="animation-item">
+            <h3>Animación 2: La fiesta sobre ruedas</h3>
+            <div class="video-responsive">
+    <iframe 
+        src="https://www.youtube.com/embed/N1L03mMCEGg?si=Oef0hD0A__vcYJX6" 
+        title="La fiesta sobre ruedas" 
+        frameborder="0" 
+        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+</div>
+            <p>Animación que muestra como cada viaje lleva historias.</p>
+        </div>
+    </div>
+
+<section class="game-section" id="juego">
+    <h2>¡CHIVA RACING!</h2>
+    <p class="game-subtitle">Explora la ruta de la Chiva en este emocionante juego.</p>
+    
+    <div class="game-container">
+        
+        <iframe 
+            class="unity-game-iframe" 
+            src="https://itch.io/embed/4020036" 
+            title="Chiva Racing" 
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+        
+        <div class="game-controls-info">
+            <p><strong>Controles:</strong> S para ir a la izquierda. D para ir a la derecha.</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section" id="contacto">
+    <h2>CONTÁCTANOS</h2>
+    <p class="contact-subtitle">Síguenos o escríbenos para compartir tus historias de la Chiva y ver contenidos nuevos.</p>
+    
+    <div class="contact-icons">
+        <a href="https://www.instagram.com/la.chiva.colombia?igsh=MWg2bmFqcGs3NmcxeQ%3D%3D&utm_source=qr" target="_blank" class="social-link instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        
+        <a href="https://chat.whatsapp.com/CKfBp2CGWL1HOaFuhd7o7e?mode=hqrt2" target="_blank" class="social-link whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <a href="https://www.tiktok.com/@la.chiva069?_r=1&_t=ZS-91k3aOObwM1" target="_blank" class="social-link tiktok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+    
+</section>
+
+<footer class="main-footer">
+        </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

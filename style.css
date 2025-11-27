@@ -1,0 +1,685 @@
+/* style.css */
+
+/* 1. Reseteo Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Comportamiento suave al hacer clic en los enlaces de anclaje */
+    scroll-behavior: smooth; 
+}
+
+/* 2. Estilos Globales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a0033; /* Fondo oscuro principal */
+    color: white; /* Texto blanco por defecto */
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Arial Black', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* 🌟 ESTILOS DE LA BARRA DE NAVEGACIÓN FIJA 🌟 */
+.main-navbar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* 🔴 COLOR ACTUALIZADO: Rosa/Fucsia Vibrante */
+    background-color: #ff0099; 
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra más oscura para destacar */
+    z-index: 1000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-family: 'Arial Black', sans-serif; 
+    font-size: 1.5em;
+    font-weight: bold;
+    /* 🔴 COLOR ACTUALIZADO: Blanco para contraste */
+    color: white; 
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.navbar-links a {
+    /* 🔴 COLOR ACTUALIZADO: Blanco */
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-links a:hover {
+    /* 🔴 COLOR ACTUALIZADO: Amarillo para el hover (efecto al pasar el mouse) */
+    background-color: #ffcc00; 
+    color: #333; /* Texto oscuro al pasar el mouse */
+}
+
+/* 3. Sección de Cabecera/Hero */
+.hero-section {
+    /* NOTA: Reemplaza esta URL con la ruta de tu imagen principal */
+    background: url('imagenes/portada.png') no-repeat center center/cover;
+    height: 100vh;
+    /* AJUSTE CLAVE: Añadir padding para que el contenido no quede debajo de la barra fija */
+    padding-top: 80px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); 
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero-section h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+.hero-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.hero-button {
+    background-color: #ff0099; 
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 50px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #e6008a;
+}
+
+/* 4. ESTILOS DE GALERÍA (AJUSTE PARA TEXTO) */
+/* ------------------------------------------- */
+.gallery-section {
+    background-color: #330066; /* Morado oscuro */
+    color: white;
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contenedor que junta imagen y texto */
+.gallery-item-info {
+    display: flex;
+    flex-direction: column; /* Apila la imagen, título y descripción */
+    width: calc(33% - 20px); /* Aproximadamente 3 ítems por fila */
+    min-width: 280px;
+    background-color: #330066; 
+    border-radius: 10px;
+    overflow: hidden; /* Asegura que la imagen respete el borde del contenedor */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.gallery-item-info:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.gallery-item-info img {
+    /* Mantiene las propiedades de la imagen que ya tenías */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0; 
+}
+
+.gallery-item-info h3 {
+    color: #ffcc00; /* Título en amarillo */
+    font-size: 1.2em;
+    padding: 15px 15px 5px;
+    margin: 0;
+}
+
+.gallery-item-info p {
+    color: #f0f0f0;
+    font-size: 0.9em;
+    padding: 0 15px 20px;
+    margin: 0;
+}
+
+/* 5. Sección de Mapa Sonoro */
+.sound-map-section {
+    background-color: #4d0099; 
+}
+
+.sound-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sound-buttons button {
+    /* Estilos generales para botones del mapa sonoro */
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+/* Colores específicos para los botones */
+.sound-buttons button:nth-child(1) { background-color: #00e676; color: #333;} 
+.sound-buttons button:nth-child(2) { background-color: #ffcc00; color: #333;} 
+.sound-buttons button:nth-child(3) { background-color: #ff0099; color: white;} 
+.sound-buttons button:nth-child(4) { background-color: #a020f0; color: white;} 
+
+.sound-buttons button:hover {
+    filter: brightness(0.9); 
+}
+
+.sound-buttons button i {
+    font-size: 1.5em;
+}
+
+/* 6. Sección de Historia/Línea de Tiempo (NUEVO DISEÑO DE BLOQUES) */
+.history-section {
+    background-color: #ffcc00; /* Amarillo brillante */
+    color: #333; /* Texto oscuro para contrastar */
+}
+
+.history-section h2 {
+    color: #333;
+}
+
+.history-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Espacio entre cada punto de la historia */
+}
+
+.history-item {
+    display: flex; /* Habilita Flexbox: Imagen y Texto al lado */
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco semitransparente sobre amarillo */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.history-image {
+    flex-shrink: 0; /* Evita que la imagen se reduzca demasiado */
+    width: 300px; /* Ancho fijo para la imagen */
+    height: 225px; /* Altura fija para la imagen (proporción 4:3) */
+    overflow: hidden; /* Oculta partes de la imagen si se desbordan */
+    border-radius: 8px;
+    border: 3px solid #333; /* Borde oscuro para la imagen */
+}
+
+.history-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+}
+
+.history-text {
+    flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+    text-align: left;
+}
+
+.history-text h3 {
+    text-align: left;
+    color: #cc6600; /* Título en color marrón/naranja */
+    margin-bottom: 10px;
+    font-size: 1.6em;
+}
+
+/* Regla para alternar el orden (Imagen a la Derecha) */
+.history-item.reverse-order {
+    flex-direction: row-reverse;
+}
+
+/* AJUSTE RESPONSIVE (Para Móviles y Pantallas Pequeñas) */
+@media (max-width: 768px) {
+    .history-item {
+        /* En móvil, la imagen y el texto van uno encima del otro */
+        flex-direction: column; 
+        text-align: center;
+        gap: 20px;
+    }
+    
+    /* En móvil, se aplica el orden normal (columna) a todas las secciones */
+    .history-item.reverse-order {
+        flex-direction: column; 
+    }
+    
+    .history-text {
+        text-align: center;
+    }
+
+    .history-text h3 {
+        text-align: center;
+    }
+    
+    .history-image {
+        width: 100%; /* La imagen ocupa todo el ancho */
+        height: auto;
+    }
+}
+
+/* 7. Sección de Podcast y Compartir */
+.podcast-share-section {
+    background-color: #ff0099; 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    padding: 60px 20px;
+}
+
+.podcast-left, .share-right {
+    flex-basis: 45%; 
+    max-width: 500px;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.podcast-left {
+    background-color: #6a0dad; 
+}
+
+.podcast-left h2 {
+    text-align: left;
+    color: white;
+}
+
+.podcast-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.podcast-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* 8. Estilos del Formulario de Compartir */
+.share-right {
+    background-color: #4d0099; 
+}
+
+.share-right h2 {
+    text-align: left;
+    color: white;
+}
+
+.share-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.share-right input[type="text"],
+.share-right textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.9); 
+    color: #333;
+}
+
+.share-right textarea {
+    resize: vertical; 
+    min-height: 100px;
+}
+
+.share-right button[type="submit"] {
+    background-color: #ffcc00; 
+    color: #333;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.share-right button[type="submit"]:hover {
+    filter: brightness(0.9);
+}
+
+/* 9. Estilos de las Nuevas Secciones de Placeholder */
+.new-section-placeholder {
+    height: 60vh; /* Para que puedas hacer scroll y ver la navegación fija */
+    background-color: #330066; /* Color Morado de la Galería */
+    color: white;
+    padding-top: 100px; 
+}
+
+/* Medias Queries para Responsividad (Ajuste para móviles) */
+@media (max-width: 768px) {
+    .main-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 10px;
+    }
+    .navbar-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .hero-section h1 {
+        font-size: 3em;
+    }
+    .hero-section h2 {
+        font-size: 1.5em;
+    }
+    .gallery-grid, .sound-buttons, .timeline-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .podcast-share-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .podcast-left, .share-right {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* Ajuste de espaciado para móviles por la barra de navegación más grande */
+    .hero-section, .new-section-placeholder {
+        padding-top: 150px; /* Aumenta el padding para la barra más alta */
+    }
+}
+
+/* 8. ESTILOS DEL REPRODUCTOR DE VIDEO (EMBED) */
+/* ------------------------------------------- */
+
+/* Contenedor que maneja la proporción del video (16:9 es el estándar de YouTube) */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 56.25% para una relación 16:9 (9/16 * 100) */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-caption {
+    font-size: 0.9em;
+    color: #ffd1ff; /* Color claro para la descripción */
+    text-align: center;
+}
+
+/* Ajuste específico para que el título del podcast se alinee con el video */
+.podcast-left h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* 9. ESTILOS DE LA SECCIÓN DE ANIMACIÓN */
+/* ------------------------------------------- */
+.animation-section {
+    background-color: #6a0dad; /* Un morado intermedio, diferente al fondo de otras secciones */
+    color: white;
+}
+
+.animation-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px; /* Espacio entre las dos animaciones */
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que las animaciones se apilen en móvil */
+}
+
+.animation-item {
+    flex: 1 1 45%; /* Cada ítem ocupa aproximadamente la mitad del contenedor (45%) */
+    min-width: 300px; /* Ancho mínimo para evitar que se aplasten */
+    text-align: center;
+    background-color: #4d0099; /* Fondo más oscuro para el ítem */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.animation-item h3 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #ffcc00; /* Título en amarillo para destacar */
+}
+
+.animation-item p {
+    margin-top: 15px;
+    font-size: 0.95em;
+    color: #ffd1ff;
+}
+
+/* ------------------------------------------- */
+/* 10. LIMPIEZA DE PLACEHOLDER ANTIGUO */
+/* ------------------------------------------- */
+/* IMPORTANTE: Si ya no vas a usar la sección genérica
+    del placeholder, puedes eliminar la regla que la definía 
+    para limpiar el CSS.
+*/
+/* Si aún la necesitas, ignora este paso */
+/* .new-section-placeholder {
+    height: 60vh; 
+    background-color: #330066; 
+    color: white;
+    padding-top: 100px; 
+}
+*/
+
+/* 10. ESTILOS DE LA SECCIÓN DE JUEGO (UNITY) */
+/* ------------------------------------------- */
+.game-section {
+    background-color: #330066; /* Color de la Galería (Morado oscuro) */
+    color: white;
+    padding-bottom: 80px; /* Más espacio al final */
+}
+
+.game-subtitle {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #ffcc00; /* Texto en amarillo para destacar */
+}
+
+.game-container {
+    max-width: 900px; /* Ancho máximo para el contenedor del juego */
+    margin: 0 auto;
+    background-color: #1a0033; /* Fondo negro para que resalte el juego */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 153, 0.7); /* Sombra fucsia llamativa */
+}
+
+.unity-game-iframe {
+    /* Implementación responsiva para el iframe (proporción 16:9) */
+    display: block;
+    width: 100%;
+    /* Altura basada en la proporción 16:9 (altura = ancho * 9 / 16) */
+    aspect-ratio: 16 / 9; 
+    border-radius: 5px;
+}
+
+.game-controls-info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ff0099; /* Fucsia para la caja de información */
+    color: white;
+    border-radius: 8px;
+    font-size: 0.9em;
+}
+
+/* ------------------------------------------- */
+/* 11. ELIMINACIÓN DE PLACEHOLDER ANTIGUO */
+/* ------------------------------------------- */
+/* Por favor, asegúrate de que la regla .new-section-placeholder
+   haya sido completamente reemplazada por .game-section y .animation-section.
+   Si aún existe la regla, elimínala de tu style.css para limpiar el código.
+*/
+
+/* 12. ESTILOS DE LA SECCIÓN DE CONTACTO */
+/* ------------------------------------------- */
+.contact-section {
+    background-color: #6a0dad; /* Morado intermedio, igual que Animación */
+    color: white;
+}
+
+.contact-subtitle {
+    font-size: 1.2em;
+    margin-bottom: 50px;
+    color: #ffcc00; /* Amarillo para el subtítulo */
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.social-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Iconos circulares */
+    font-size: 2.5em;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-link:hover {
+    transform: translateY(-5px); /* Pequeño salto al pasar el mouse */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Colores específicos de la marca (adaptados a la paleta) */
+.social-link.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #ffc000 45%, #ff2d7e 60%, #ff0099 90%);
+}
+
+.social-link.whatsapp {
+    background-color: #25d366; /* Verde WhatsApp */
+}
+
+.social-link.tiktok {
+    background-color: #000000; /* Negro (color base de TikTok) */
+    border: 3px solid #ff0099; /* Borde fucsia para TikTok */
+}
+
+.contact-email {
+    font-size: 1em;
+    color: #ffd1ff;
+    margin-top: 10px;
+}
+
+/* ------------------------------------------- */
+/* 13. LIMPIEZA DEL PLACEHOLDER ANTIGUO */
+/* ------------------------------------------- */
+/* Elimina la regla antigua si todavía existe: */
+/*
+.new-section-placeholder {
+    height: 60vh; 
+    background-color: #330066; 
+    color: white;
+    padding-top: 100px; 
+}
+*/
+
+/* 1. ESTILOS GENERALES DE HERO */
+/* ------------------------------------------- */
+
+/* Ajuste de color para el subtítulo */
+.hero-content h2.hero-subtitle {
+    margin-top: 5px;
+    margin-bottom: 25px; /* Más margen abajo */
+    font-size: 1.5em; /* Ajusta el tamaño si es necesario */
+}
+
+/* 🚨 CLAVE 1: El color amarillo */
+.highlight-yellow {
+    color: #ffcc00; /* Amarillo que usamos en los títulos */
+}
+
+/* 🚨 CLAVE 2: Centrar el botón (si usaste <a>) */
+.hero-content a.hero-button {
+    /* Si ya tenías un estilo para .hero-button, solo verifica que tenga margin: auto o sea display: block; */
+    display: inline-block; /* O block si quieres que ocupe todo el ancho */
+    margin-top: 15px; /* Espacio encima del botón */
+    
+    /* Propiedades del botón que ya tenías: */
+    background-color: #ff0099;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
