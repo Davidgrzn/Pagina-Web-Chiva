@@ -304,11 +304,14 @@ section {
 
 /* 7. Sección de Podcast y Compartir */
 .podcast-share-section {
-    background-color: #ff0099; 
+    background-color: #ff0099; /* Fondo rosa/fucsia de la banda */
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 60px 20px;
+    
+    /* ❗ CAMBIO CRÍTICO AÑADIDO AQUÍ ❗ */
+    align-items: flex-start; /* Hace que las columnas solo sean tan altas como su contenido */
 }
 
 .podcast-left, .share-right {
@@ -682,4 +685,5 @@ section {
     cursor: pointer;
     border: none;
     transition: background-color 0.3s;
+
 }
